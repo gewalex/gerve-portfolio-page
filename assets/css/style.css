@@ -1,0 +1,269 @@
+/* add css variables for defined color*/
+:root {
+    --primary-color:#00ffff; 
+    --secondary-color:#29a2f3;
+    --tertiary-color:#32d872;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--tertiary-color);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* add flexbox to the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36 px;
+    color: var(--primary-color);
+    margin: 0;
+}
+/* add text-shadow property */
+header h1 {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+/* replace marging with padding to create a lighter navigation menu */
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw; 
+}
+
+/* add text-shadow property */
+header nav ul li a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+}
+
+footer h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div {
+    line-height: 1.5;
+    text-align: right;
+}
+ 
+section{
+    /* padding: 60px;  */
+    padding: 40px;
+} 
+
+/* add "align-items" */
+.hero {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; 
+    background-image: url("../images/hero-bg-portfolio.png");  
+    background-size: cover;
+    background-origin: center;   
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+} 
+
+/* add css rule for opacity or transparency either or */
+/* .abouts, .works, .my-contacts, my-resumes {
+     background: var(--primary-color); 
+}   */
+/* add css rule for opacity or transparencyeither or */
+body {
+    background: rgba(0, 255,255, 0.50);
+    
+} 
+
+/* add css rule to consolidate sections*/ 
+.about h3, .work h3, .my-contact h3, .my-resume h3 {
+    color: var(--secondary-color);
+    font-size: 46px;
+    flex: 1 30%;
+}
+
+
+.about-info, .work-info, .my-contact-info, .my-resume-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-left: 5px solid red;
+    padding-left: 5px;
+}
+
+.about-text, .work-text, .my-contact-text, .my-resume-text { 
+    flex: 12;
+} 
+
+.about-text p, .work-text p, .my-contact-text p, .my-resume-text p {
+    color: var(--tertiary-color);
+    font-size: 18px;
+}
+
+.about, .work, .my-contact, .my-resume {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+
+.project-image, .resume-image {
+    margin: 20px; 
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.project, .about-me-contact, .about-my-resume  {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.project-image img, .resume-image img {
+    width: 100%;
+}
+
+.project-status, .resume status {
+    padding: 25px;
+    line-height: 1.3;
+}
+
+
+.flex-row {
+    display: flex;
+}
+
+.project-status p, .resume-status p{
+    font-size: 17px;
+}
+
+/* edit the 980px media query */
+@media screen and (max-width: 980px) {
+    /* add styles to header and footer */
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+     header h1 { 
+         width: 100%;
+         text-align: center;
+     }
+
+     header nav ul {
+         margin-top: 20px;
+         width: 100%;
+         justify-content: center;
+     }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div{
+        text-align: center;
+        width: 100%;
+    }
+    
+
+    .project-image, .resume-image {
+        flex: 0 70%;
+    }
+
+}
+
+/* add css rule to media query for 768px */
+@media screen and (max-width: 768px){
+    section {
+        padding: 30px 15px;
+    }
+
+    .about h3, .work h3, .my-contact h3, .my-resume h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+    
+    .about-info, .work-info, .my-contact-info, .my-resume {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+     .project-image, .resume-image {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15%;
+    } 
+
+    .about-text, .work-text, .my-contact-text, .my-resume-text {
+        flex: 100%;
+    }
+}
+
+/* add css rule to media query for 575px */
+@media screen and (max-width: 575px) {
+   
+
+    .project-image, .resume-image {
+        flex: 0 100%;
+    }
+    
+}
+    
+/*add some hover effects to the links */
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
